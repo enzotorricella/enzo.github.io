@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menús Variados - ET Dev</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="C:\wamp64\www\Proyecto_Pedido_Comandera\IMG\delivery-man (1).ico" />
+
+
+</head>
+
+<body>
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <img src="IMG/delivery-man.png" alt="" srcset="">
+      <a class="navbar-brand" href="Comanda.html">Pedido Burger</a>
+
+    </div>
+    
+    </nav>
+
+  </header>
+
+  <main>
+    <div id="carrito" class="container mt-4">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito" class="list-group"></ul>
+      <p id="total" class="mt-3">Pedido: 0</p>
+      <button id="confirmar-pedido"  class="btn btn-secondary">Confirmar Pedido</button>
+      </div>
+
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/empanada_carne.jpg" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+              <h5 class="card-title">Combo King-Pollo</h5>
+              <p class="card-text">
+                <li>Hamburguesa de pollo 
+                  <li>Papas regulares</li></li>
+                <li>gaseosa Mediana</li>
+              <li><STROng>$1500</STROng></li></p>
+              
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu1Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/empanada_atun.jpg" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+              <h5 class="card-title">Papas King</h5>
+              <p class="card-text">Balde de 500gr de Papas</p>
+              <div class="form-group input-small"><br><br><br>
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu2Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/empanada_jamonyqueso.jpg" class="card-img-top" alt="Imagen 3">
+            <div class="card-body">
+              <h5 class="card-title">Combo Mexican</h5>
+              <p class="card-text"><li>3 tacos al pasto</li>
+              <li>Papas regulares</li>
+            <li>Gaseosa o refresco natural</li></p>
+              <div class="form-group input-small"><br>
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu3Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/cerveza.jpg" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+              <h5 class="card-title">Menú 1</h5>
+              <p class="card-text">Descripción del menú 1.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu4Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/gaseosa.jpg" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+              <h5 class="card-title">Menú 2</h5>
+              <p class="card-text">Descripción del menú 2.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu5Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/agua.jpg" class="card-img-top" alt="Imagen 3">
+            <div class="card-body">
+              <h5 class="card-title">Menú 3</h5>
+              <p class="card-text">Descripción del menú 3.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu6Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/napolitana.jpg" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+              <h5 class="card-title">Menú 1</h5>
+              <p class="card-text">Descripción del menú 1.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu7Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/jamonymorron.jpg" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+              <h5 class="card-title">Menú 2</h5>
+              <p class="card-text">Descripción del menú 2.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu8Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/muzzarella.jpg" class="card-img-top" alt="Imagen 3">
+            <div class="card-body">
+              <h5 class="card-title">Menú 3</h5>
+              <p class="card-text">Descripción del menú 3.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu9Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/combo1.jpeg" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+              <h5 class="card-title">Menú 1</h5>
+              <p class="card-text">Descripción del menú 1.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu10Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/combo2.jpeg" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+              <h5 class="card-title">Menú 2</h5>
+              <p class="card-text">Descripción del menú 2.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu11Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/combo3.jpeg" class="card-img-top" alt="Imagen 3">
+            <div class="card-body">
+              <h5 class="card-title">Menú 3</h5>
+              <p class="card-text">Descripción del menú 3.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu12Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/bombones.jpg" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+              <h5 class="card-title">Menú 1</h5>
+              <p class="card-text">Descripción del menú 1.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu13Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/almendrado.jpg" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+              <h5 class="card-title">Menú 2</h5>
+              <p class="card-text">Descripción del menú 2.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu14Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMG/Productos/helado.jpg" class="card-img-top" alt="Imagen 3">
+            <div class="card-body">
+              <h5 class="card-title">Menú 3</h5>
+              <p class="card-text">Descripción del menú 3.</p>
+              <div class="form-group input-small">
+                <label for="menu1Cantidad">Cantidad:</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="menu15Cantidad">
+                  <div class="input-group-append">
+                    <button class="btn btn-cart" type="button">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const listaCarrito = document.getElementById('lista-carrito');
+      const totalCarrito = document.getElementById('total');
+      const botonesAgregar = document.querySelectorAll('.btn-cart');
+      let carrito = [];
+  
+      botonesAgregar.forEach(btn => {
+          btn.addEventListener('click', agregarAlCarrito);
+      });
+  
+      function agregarAlCarrito(event) {
+          const card = event.target.closest('.card');
+          const titulo = card.querySelector('.card-title').textContent;
+          const cantidad = card.querySelector('.form-control').value;
+          const producto = {
+              titulo,
+              cantidad
+          };
+  
+          carrito.push(producto);
+          actualizarCarrito();
+      }
+  
+      function actualizarCarrito() {
+          listaCarrito.innerHTML = '';
+          let total = 0;
+  
+          carrito.forEach(producto => {
+              const li = document.createElement('li');
+              li.classList.add('list-group-item');
+              li.textContent = `${producto.titulo} - Cantidad: ${producto.cantidad}`;
+              listaCarrito.appendChild(li);
+  
+              total += parseInt(producto.cantidad);
+          });
+  
+          totalCarrito.textContent = `Total: $${total}`;
+      }
+      const confirmarPedidoButton = document.getElementById('confirmar-pedido');
+
+confirmarPedidoButton.addEventListener('click', function () {
+    if (carrito.length > 0) {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        window.location.href = 'Comanda.html';
+    } else {
+        alert('El carrito está vacío. Agrega productos antes de confirmar el pedido.');
+    }
+});
+  </script>
+  
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-dark">
+    <div class="container text-center">
+      <span class="text-muted">
+        &copy; <a href="https://enzotorricella.github.io/" target="_blank">ET</a> -
+        <script>document.write(new Date().getFullYear())</script>
+      </span>
+    </div>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script></body></html>

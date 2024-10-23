@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comanda de pedidos - ET Dev</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="C:\wamp64\www\Proyecto_Pedido_Comandera\IMG\delivery-man (1).ico" />
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="IMG/delivery-man.png" alt="" srcset="">
+            <a class="navbar-brand" href="index.html">Menu Burger</a>
+        </nav>
+
+    </header>
+
+    <main class="container py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="kanban-board">
+                    <div class="kanban-board text-center">
+                        <h2 id="clock">00:00:00</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 class="text-center">Pendientes</h3>
+                            <ul id="pedidos-pendientes" class="list-group">
+                                <!-- Aquí se agregarán las tarjetas de pedidos pendientes -->
+                            </ul>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <h3 class="text-center">En Proceso</h3>
+                            <ul id="pedidos-en-proceso" class="list-group">
+                                <!-- Aquí se agregarán las tarjetas de pedidos en proceso -->
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 class="text-center">Finalizados</h3>
+                            <ul id="pedidos-finalizados" class="list-group">
+                                <!-- Aquí se agregarán las tarjetas de pedidos finalizados -->
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container text-center">
+            <span class="text-muted">
+                &copy; <a href="https://enzotorricella.github.io/" target="_blank">ET</a> -
+                <script>document.write(new Date().getFullYear())</script>
+            </span>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function updateClock() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString();
+                document.getElementById('clock').textContent = timeString;
+            }
+    
+            setInterval(updateClock, 1000);
+    
+            const kanbanBoard = document.querySelector('.kanban-board');
+    
+            kanbanBoard.addEventListener("click", function (event) {
+                const target = event.target;
+                if (target.classList.contains("next-btn")) {
+                    const card = target.closest(".list-group-item");
+                    const currentColumn = card.closest(".col-sm-4");
+                    const nextColumn = currentColumn.nextElementSibling;
+    
+                    if (nextColumn) {
+                        const targetList = nextColumn.querySelector('.list-group');
+                        targetList.appendChild(card);
+    
+                        if (nextColumn.classList.contains("col-sm-4") && nextColumn.nextElementSibling === null) {
+                            target.querySelector('.next-btn').classList.remove("btn-primary");
+                            target.querySelector('.next-btn').classList.add("btn-danger");
+                            target.querySelector('.next-btn').textContent = "Borrar";
+                        }
+                    } else if (currentColumn.classList.contains("col-sm-4") && currentColumn.nextElementSibling === null) {
+                        const parentList = currentColumn.querySelector('.list-group');
+                        parentList.removeChild(card);
+                    }
+                }
+            });
+    
+            // Obtener los datos del carrito del Local Storage
+            const carritoData = localStorage.getItem('carrito');
+            const carrito = JSON.parse(carritoData);
+    
+            if (carrito) {
+                const pedidosPendientesList = document.getElementById('pedidos-pendientes');
+    
+                carrito.forEach((producto, index) => {
+                    const pedidoCard = document.createElement('li');
+                    pedidoCard.classList.add('list-group-item');
+                    pedidoCard.innerHTML = `
+                        <h5 class="card-title">Pedido ${index + 1}</h5>
+                        <p class="card-text">${producto.titulo} - Cantidad: ${producto.cantidad}</p>
+                        <button class="btn btn-primary btn-block next-btn">Next</button>
+                    `;
+    
+                    pedidosPendientesList.appendChild(pedidoCard);
+                });
+            }
+        });
+    </script>
+    
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
