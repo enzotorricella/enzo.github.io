@@ -1,0 +1,27 @@
+body{
+    background-color: rgba(248, 241, 245, 0.753)
+    }
+
+    form{
+            background-color: #ffffff;
+            margin: 1rem;
+            padding: 1rem;
+            border: 2px solid rgb(0, 0, 0);
+           
+            text-align: center;
+          }
+
+#img-log{
+  border: 1px solid rgb(0, 0, 0);
+  width: 80px;
+height: 80px;
+}
+
+#portal{
+  background-color:rgb(69, 69, 73);
+}
+#myTab{
+  background-color: rgb(157, 194, 250);
+}
+table{background-color:  rgb(157, 194, 250);
+  border-radius: ;: 1px solid rgb(0, 0, 0);}
