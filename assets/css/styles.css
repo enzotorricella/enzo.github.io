@@ -5349,8 +5349,8 @@ fieldset:disabled .btn {
 }
 
 .accordion-button:not(.collapsed) {
-  color: #aa5432;
-  background-color: #f8efeb;
+  color:#343a40 ;
+  background-color: #f8f9fa;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
 }
 
@@ -5383,9 +5383,9 @@ fieldset:disabled .btn {
 
 .accordion-button:focus {
   z-index: 3;
-  border-color: #deae9c;
+  border-color: #343a40;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(189, 93, 56, 0.25);
+  box-shadow: 0 0 0 0.25rem #57605c78;
 }
 
 .accordion-header {
@@ -12354,7 +12354,7 @@ p.lead {
 }
 
 .social-icons .social-icon:hover {
-  background-color: #bd5d38;
+  background-color: #6c757d;
 }
 
 .dev-icons {
