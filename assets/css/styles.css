@@ -137,6 +137,40 @@ h2,
   }
 }
 
+
+.resume-section img {
+  max-width: 120px;
+  height: auto;
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.subheading {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .resume-section .row {
+      flex-direction: column;
+  }
+}
+
+.resume-section-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+
+
+
+
 h3,
 .h3 {
   font-size: calc(1.325rem + 0.9vw);
