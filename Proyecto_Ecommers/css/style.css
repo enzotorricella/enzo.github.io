@@ -1,13 +1,91 @@
+/* Estilos generales */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #FFF8E7; /* Fondo crema claro */
+}
 
-html, body {
-    height: 100%;
-    margin: 0;
-    
-  }
-  
-  body {
-    background-image: url('/img/6067.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
+/* Estilos para el carrito */
+#carrito {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  overflow-y: auto;
+  border-left: 2px solid black;
+  border-radius: 0;
+}
+
+/* Lista del carrito */
+#lista-carrito {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#lista-carrito li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* Total del carrito */
+#total {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Estilos de las tarjetas de productos */
+.card {
+  background-color: #fff9f0;
+  border: 2px solid #cfcfcf;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #e87410; /* Naranja de botones de pedido */
+}
+
+/* Botón de añadir al carrito */
+.btn-cart {
+  background-color: #e87410;
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.btn-cart i {
+  color: white;
+}
+
+/* Otros estilos personalizados */
+.kanban-board {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#clock {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el botón de "Next" y "Borrar" */
+.btn-danger {
+  background-color: red;
+  border-color: rgb(10, 9, 9);
+  color: white;
+}

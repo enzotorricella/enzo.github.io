@@ -1,86 +1,71 @@
-html,
-body {
+/* Estilos generales */
+html, body {
   height: 100%;
   margin: 0;
+  background-color: #FFF8E7; /* Fondo crema claro */
 }
 
-#carrito {
-  border: 2px solid black;
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-#lista-carrito {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#lista-carrito li {
-  margin-bottom: 10px;
-}
-
-#total {
+/* Botón flotante para confirmar pedido */
+#toggle-sidebar {
+  position: fixed;
+  bottom: 10px; /* 20px desde el borde inferior */
+  right: 10px; /* 20px desde el borde derecho */
+  z-index: 999;
+  background-color: white;
+  border: 2px solid red;
+  color: red;
   font-weight: bold;
-}
-
-body {
-  background-image: url('IMG/backgrounds/burger2_01.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.kanban-board {
-  border: 5px solid rgb(116, 112, 109);
-}
-
-.card {
-  border: 5px solid rgb(116, 112, 109);
-}
-
-.input-group-append[type="number"] {
-  width: 25%;
-}
-
-
-
-.input-small input[type="number"] {
-  width: 25%;
-}
-
-/* Estilo para el botón del carrito */
-.btn-cart {
-  background-color: rgb(238, 126, 1);
-  color: white;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  /* Ajusta los radios de las esquinas para que se vea bien junto al input */
-}
-
-/* Cambiar el color del icono en el botón */
-.btn-cart i {
-  color: white;
-}
-
-
-/* Estilos personalizados */
-.kanban-board {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
+  font-size: 16px;
+  padding: 6px 10px;
   border-radius: 5px;
-  padding: 20px;
+  max-width: 200px;
+  text-align: center;
+  width: auto;
+  transition: opacity 0.3s ease; /* Animación para desvanecer */
 }
 
-#clock {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+
+/* Sidebar (Carrito desplegable) */
+#carrito {
+  position: fixed;
+  left: 0;
+  bottom: -100%; /* Inicialmente oculto */
+  width: 100%;
+  max-height: 60vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-top: 2px solid #ccc;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  transition: bottom 0.6s ease-in-out;
+  z-index: 10;
 }
-/* Estilo para el botón "Next" y "Borrar" en la columna "Finalizados" */
-.btn-danger {
-  background-color: red;
-  border-color: rgb(10, 9, 9);
-  color: white;
+
+#carrito.active {
+  bottom: 0;
+}
+
+/* Ajustes para el contenido principal */
+.main-content {
+  margin-left: 15px;
+  margin-right: 270px;
+}
+
+/* Estilos de las tarjetas de productos */
+.card {
+  background-color: #fff9f0;
+  border: 2px solid #cfcfcf;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #e87410;
+}
+
+.card-body {
+  padding: 15px;
 }

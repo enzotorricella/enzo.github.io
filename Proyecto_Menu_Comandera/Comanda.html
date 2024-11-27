@@ -1,134 +1,259 @@
+<!-- Comanda.html -->
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comanda de pedidos - ET Dev</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="C:\wamp64\www\Proyecto_Pedido_Comandera\IMG\delivery-man (1).ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comanda - Pedido Burger</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stylecomanda.css">
 </head>
-
 <body>
-    <header>
+  <!-- Header con navegación -->
+  <header>
+    <nav class="navbar">
+      <a class="navbar-brand" href="index.html">Pedido Burger</a>
+    </nav>
+  </header>
+<style>
+    /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header */
+  header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Barra de navegación */
+  .navbar {
+    font-size: 18px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Título */
+  h1 {
+    text-align: center;
+    color: #007bff;
+  }
+  
+  /* Lista de pedidos */
+  .order-list {
+    margin-top: 20px;
+  }
+  
+  .order-item {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-item .order-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .order-item .order-details {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .order-actions {
+    margin-top: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Botones al pasar el mouse (hover) */
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+  }
+  /* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hace que el body ocupe al menos toda la altura de la pantalla */
+}
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <img src="IMG/delivery-man.png" alt="" srcset="">
-            <a class="navbar-brand" href="index.html">Menu Burger</a>
-        </nav>
+/* Contenedor principal */
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex: 1; /* Hace que el contenedor principal ocupe el espacio disponible */
+}
 
-    </header>
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  margin-top: auto; /* Empuja el footer hacia abajo */
+}
 
-    <main class="container py-4">
-        <div class="row">
-            <div class="col-12">
-                <div class="kanban-board">
-                    <div class="kanban-board text-center">
-                        <h2 id="clock">00:00:00</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <h3 class="text-center">Pendientes</h3>
-                            <ul id="pedidos-pendientes" class="list-group">
-                                <!-- Aquí se agregarán las tarjetas de pedidos pendientes -->
-                            </ul>
-                        </div>
-                        
-                        <div class="col-sm-4">
-                            <h3 class="text-center">En Proceso</h3>
-                            <ul id="pedidos-en-proceso" class="list-group">
-                                <!-- Aquí se agregarán las tarjetas de pedidos en proceso -->
-                            </ul>
-                        </div>
-                        <div class="col-sm-4">
-                            <h3 class="text-center">Finalizados</h3>
-                            <ul id="pedidos-finalizados" class="list-group">
-                                <!-- Aquí se agregarán las tarjetas de pedidos finalizados -->
-                            </ul>
-                        </div>
-                        
-                    </div>
-                </div>
-
-            </div>
+</style>
+  <!-- Contenedor principal de la comanda -->
+  <main class="container">
+    <h1>Pedidos Activos</h1>
+  
+    <!-- Lista de pedidos -->
+    <div class="order-list">
+      <!-- Se repite este bloque por cada pedido -->
+      
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
         </div>
+      </div>
 
-    </main>
-
-    <footer class="footer mt-auto py-3 bg-dark">
-        <div class="container text-center">
-            <span class="text-muted">
-                &copy; <a href="https://enzotorricella.github.io/" target="_blank">ET</a> -
-                <script>document.write(new Date().getFullYear())</script>
-            </span>
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
         </div>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            function updateClock() {
-                const now = new Date();
-                const timeString = now.toLocaleTimeString();
-                document.getElementById('clock').textContent = timeString;
-            }
-    
-            setInterval(updateClock, 1000);
-    
-            const kanbanBoard = document.querySelector('.kanban-board');
-    
-            kanbanBoard.addEventListener("click", function (event) {
-                const target = event.target;
-                if (target.classList.contains("next-btn")) {
-                    const card = target.closest(".list-group-item");
-                    const currentColumn = card.closest(".col-sm-4");
-                    const nextColumn = currentColumn.nextElementSibling;
-    
-                    if (nextColumn) {
-                        const targetList = nextColumn.querySelector('.list-group');
-                        targetList.appendChild(card);
-    
-                        if (nextColumn.classList.contains("col-sm-4") && nextColumn.nextElementSibling === null) {
-                            target.querySelector('.next-btn').classList.remove("btn-primary");
-                            target.querySelector('.next-btn').classList.add("btn-danger");
-                            target.querySelector('.next-btn').textContent = "Borrar";
-                        }
-                    } else if (currentColumn.classList.contains("col-sm-4") && currentColumn.nextElementSibling === null) {
-                        const parentList = currentColumn.querySelector('.list-group');
-                        parentList.removeChild(card);
-                    }
-                }
-            });
-    
-            // Obtener los datos del carrito del Local Storage
-            const carritoData = localStorage.getItem('carrito');
-            const carrito = JSON.parse(carritoData);
-    
-            if (carrito) {
-                const pedidosPendientesList = document.getElementById('pedidos-pendientes');
-    
-                carrito.forEach((producto, index) => {
-                    const pedidoCard = document.createElement('li');
-                    pedidoCard.classList.add('list-group-item');
-                    pedidoCard.innerHTML = `
-                        <h5 class="card-title">Pedido ${index + 1}</h5>
-                        <p class="card-text">${producto.titulo} - Cantidad: ${producto.cantidad}</p>
-                        <button class="btn btn-primary btn-block next-btn">Next</button>
-                    `;
-    
-                    pedidosPendientesList.appendChild(pedidoCard);
-                });
-            }
-        });
-    </script>
-    
-    
-    
+      </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+      <div class="order-item">
+        <span class="order-number">#1234</span>
+        <span class="order-details">Hamburguesa Doble + Papas</span>
+        <div class="order-actions">
+          <button class="btn btn-success">Confirmar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+      
+      <!-- Más pedidos aquí -->
+    </div>
+  </main>
+  
+  
+  <footer>
+    <p>&copy; 2024 Pedido Burger</p>
+  </footer>
 </body>
-
 </html>
