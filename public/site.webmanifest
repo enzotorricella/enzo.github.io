@@ -1,0 +1,14 @@
+{
+  "name": "ETorri | Enzo Torricella",
+  "short_name": "ETorri",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#020617",
+  "background_color": "#020617",
+  "display": "standalone"
+}
